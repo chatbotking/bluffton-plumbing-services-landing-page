@@ -1,0 +1,101 @@
+/* ===== BASE TYPOGRAPHY & LAYOUT ===== */
+        /* Professional font stack with Inter for clean, modern appearance */
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            line-height: 1.6;
+        }
+
+    /* ===== PAGE HEADER ANIMATIONS ===== */
+    /* Subtle fade-in animation for subpage header content */
+    .header-fade-in {
+        animation: fadeInDown 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    
+    @keyframes fadeInDown {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* ===== SERVICE DETAIL ANIMATIONS ===== */
+    /* Staggered fade-in for service cards on page load */
+    .service-detail-card {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    .service-detail-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-detail-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-detail-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-detail-card:nth-child(4) { animation-delay: 0.4s; }
+    .service-detail-card:nth-child(5) { animation-delay: 0.5s; }
+    .service-detail-card:nth-child(6) { animation-delay: 0.6s; }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* ===== CTA BUTTON HOVER EFFECTS ===== */
+    /* Professional blue-to-darker-blue transition for primary buttons */
+    .btn-primary {
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    }
+    
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #1d4ed8, #1e40af);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    
+    /* ===== SERVICE CARDS HOVER EFFECTS ===== */
+    /* Subtle elevation and shadow effects for service feature cards */
+    .service-card {
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-color: #2563eb;
+    }
+    
+    /* ===== FORM INPUT STYLING ===== */
+    /* Clean, professional form inputs with focus states */
+    .form-input {
+        transition: all 0.2s ease;
+        border: 2px solid #e5e7eb;
+    }
+    
+    .form-input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        outline: none;
+    }
+    
+    /* ===== BREADCRUMB STYLING ===== */
+    /* Navigation breadcrumb for subpage hierarchy */
+    .breadcrumb-link {
+        transition: color 0.2s ease;
+    }
+    
+    .breadcrumb-link:hover {
+        color: #2563eb;
+    }
+    
+    /* ===== MOBILE RESPONSIVE ADJUSTMENTS ===== */
+    /* Ensures proper spacing and readability across all device sizes */
+    @media (max-width: 640px) {
+        .subpage-title {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+    }
